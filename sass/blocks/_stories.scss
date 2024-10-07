@@ -1,0 +1,143 @@
+.alpha-stories {
+	display: flex;
+	margin-left: -25px;
+	margin-right: -25px;
+	justify-content: center;
+	align-items: stretch;
+	flex-wrap: wrap;
+
+	&-single {
+		padding: 25px;
+		display: flex;
+		align-items: stretch;
+		justify-content: stretch;
+
+		flex: 0 0 33.333%;
+
+		@include media( $desktop__only ) {
+			&:nth-child( 1 ),
+			&:nth-child( 7 ) {
+				flex: 0 0 66.666%;
+			}
+		}
+
+		@include media( $mobile__tablet ) {
+			flex: 0 0 100%;
+		}
+	}
+}
+
+.alpha-story {
+	@include rounded-shadow();
+	width: 100%;
+	overflow: hidden;
+
+	> a {
+		display: block;
+	}
+
+	&-details {
+		position: relative;
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(
+				to top,
+				rgba( 32, 40, 54, 0.85 ) 10%,
+				rgba( 32, 40, 54, 0.33 ) 60%,
+				rgba( 32, 40, 54, 0.04 ) 70%
+			);
+			z-index: 2;
+		}
+
+		figure {
+			margin: 0;
+			width: 100%;
+			height: 500px;
+			position: relative;
+			z-index: 1;
+
+			@include media( $tablet__only ) {
+				// height: 300px;
+			}
+
+			@include media( $mobile__only ) {
+				// height: 100%;
+				// position: absolute;
+				// top: 0;
+				// left: 0;
+				// width: 100%;
+			}
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	&-description {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 20px 20px 50px;
+		color: $color__white;
+		font-size: 22px;
+		z-index: 3;
+
+		@include media( $mobile__only ) {
+			// position: relative;
+			font-size: 22px;
+		}
+
+		p {
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&-summary {
+		display: flex;
+		padding: 15px 20px;
+		justify-content: space-between;
+
+		h5 {
+			font-size: 16px;
+			font-weight: 400;
+			color: $color__dark;
+			margin: 0;
+		}
+
+		@include media( $mobile__only ) {
+			justify-content: center;
+			flex-wrap: wrap;
+
+			h5 {
+				flex: 0 0 100%;
+				text-align: center;
+				margin-bottom: 1em;
+				font-size: 1.2em;
+				font-weight: 500;
+			}
+		}
+	}
+
+	&-watch {
+		white-space: nowrap;
+		margin-left: 20px;
+	}
+}

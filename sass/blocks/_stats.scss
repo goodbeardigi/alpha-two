@@ -1,0 +1,79 @@
+.alpha-stats {
+	background-image: url(assets/images/world-map.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	box-shadow: 0px 0px 50px 50px inset white;
+
+	@include block-group();
+
+	.container {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&-image,
+	&-overlay {
+		img {
+			@include rounded-shadow();	
+		}
+	}
+
+	&-image {
+		flex-basis: 100%;
+		position: relative;
+
+		@include media( $tablet__desktop ) {
+			flex-basis: 60%;
+		}
+	}
+
+	&.image-right .alpha-stats-image {
+		@include media( $tablet__desktop ) {
+			order: 1;
+		}
+	}
+
+	&-overlay {
+		position: absolute;
+		bottom: -3em;
+		right: 3em;
+		max-width: 300px;
+
+		@include media( $tablet__only ) {
+			max-width: 240px;
+			bottom: -1em;
+			right: 1em;
+		}
+
+		@include media( $mobile__only ) {
+			display: none;
+		}
+	}
+
+	&-content {
+		flex-basis: 100%;
+
+		@include media( $tablet__desktop ) {
+			flex-basis: 40%;
+		}
+	}
+
+	&-time {
+		font-weight: 700;
+		display: inline-block;
+		border-bottom: 3px solid $color__accent;
+		margin: 0 0 32px;
+	}
+
+	&-heading {
+		@include media( $tablet__desktop ) {
+			width: 150%;
+		}
+		position: relative;
+		z-index: 1;
+		margin-top: 0;
+	}
+}

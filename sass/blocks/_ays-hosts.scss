@@ -1,0 +1,154 @@
+.ays-hosts-swiper{
+	position: relative;
+	.swiper-slide{
+		height: auto;
+		background: $color__ays-light-blue;
+	}
+
+}
+.ays-host-inner{
+	background: $color__ays-light-blue;
+	padding: 1em;
+
+	@include media($tablet__desktop){
+		display: flex;
+	}
+}
+.ays-host-content,
+.ays-host-image{
+	@include media($tablet__desktop){
+		width: 50%;
+		position: relative;
+	}
+	img{
+		border: solid 6px $color__ays-green;
+	}
+	.ays-vimeo-custom-thumb-cover{
+		box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    -webkit-box-sizing: border-box;
+	}
+}
+
+.ays-host-content{
+	padding: 0 1rem;
+	color: #fff;
+	text-align: center;
+	display: flex;
+	// flex-direction: column;
+    align-items: center;
+    // justify-content: space-between;
+
+    @include media($tablet__desktop){
+    	padding: 0 4rem;
+    }
+}
+.ays-host-name{
+	font-size: 34px;
+	font-family: $font__ays;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+	margin: 0;
+}
+
+.ays-host-image-mobile{
+	@include media($tablet__desktop){
+		display: none;
+	}
+}
+
+.ays-host-image-desktop{
+	display: none;
+	@include media($tablet__desktop){
+		display: block;
+	}
+}
+
+.ays-hosts{
+	h2{
+		text-align: center;
+	}
+	.ays-host-contain{
+		transform: scale(1.4);
+		opacity: 0;
+		transition-property: all;
+		transition-timing-function: ease-in-out(0.4, 0, 0.2, 1);
+		transition-duration: 700ms;
+		transform-origin: center;
+	}
+	.swiper-slide-active{
+		.ays-host-contain{
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+	.swiper-pagination-container{
+		position: absolute;
+		bottom: 10px;
+		
+		left: 2rem;
+		right: 2rem;
+		width: 83%;
+
+
+		@include media($tablet__desktop){
+			left: 5rem;
+			right: 5rem;
+			width: 43%;
+			bottom: 10px;
+		}
+
+		.swiper-pagination{
+			border-top: solid 1px #fff;
+			padding-top: 10px;
+			.swiper-pagination-bullet{
+				background-color: #fff;
+				// &.swiper-pagination-bullet-active{
+				// 	opacity: 1;
+				// }
+			}
+
+		}
+		// width: 56% !important;
+	}
+}
+
+.ays-host-nav-buttons{
+	// position: absolute;
+	bottom: 0;
+	// border-top: solid 1px #fff;
+	display: flex;
+	gap: 50px;
+	justify-content: center;
+	padding-top: 30px;
+	padding-bottom: 15px;
+
+	margin: 20px 0;
+
+	@include media($tablet__desktop){
+		padding-top: 30px;
+		padding-bottom: 15px;
+		margin-bottom: 0;
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev{
+		position: relative;
+		display: block !important;
+		background-color: transparent;
+	}
+}
+
+.acf-block-preview{
+	.ays-host{
+		display: none;
+		&:first-child{
+			display: block;
+		}
+		.ays-host-contain{
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+}

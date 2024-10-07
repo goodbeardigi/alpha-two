@@ -1,0 +1,100 @@
+.alpha-ays-cards{
+	.container{
+		@include media($desktop__only){
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}
+
+.ays-card{
+	@include media($desktop__only){
+		@include column-width(3);
+	}
+	margin-top: 30px;
+	position: relative;
+	picture{
+		position: relative;
+		margin-left: 20px;
+	}
+}
+
+.ays-card-bg-ays-green{
+	background-color: $color__ays-green;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: calc(100% - 40px);
+	width: calc(100% - 10px);
+	padding-right: 20px;
+
+	@include media($desktop__only){
+		width: 100%;
+	}
+}
+
+.ays-content{
+	position: relative;
+	padding: 20px;
+	padding-bottom: 0;
+	// width: calc(100% - 20px);
+}
+
+
+// Parallax Stuff
+.ays-parallax{
+	.ays-card-0,
+	.ays-card-1,
+	.ays-card-2{
+		transform: translate3d(0px, 60px, 0px);
+		transition-property: transform;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 700ms;
+
+		img{
+			transform: translate3d(0px, 80px, 0px);
+			transition-property: transform;
+			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			transition-duration: 700ms;
+		}
+	}
+	.ays-card-0.move-in,
+	.ays-card-1.move-in,
+	.ays-card-2.move-in{
+		transform: translate3d(0px, 00px, 0px);
+
+		img{
+			transform: translate3d(0px, 00px, 0px);
+		}
+	}
+	@include media($desktop__only){
+
+		.ays-card-0 {
+			
+			transform: translate3d(0px, 120px, 0px);
+
+			img{
+				transform: translate3d(0px, 140px, 0px);
+			}	
+
+		}
+		.ays-card-1 {
+			
+			transform: translate3d(0px, 60px, 0px);
+
+			img{
+				transform: translate3d(0px, 80px, 0px);
+			}
+
+		}
+		.ays-card-2 {
+			
+			transform: translate3d(0px, 180px, 0px);
+
+			img{
+				transform: translate3d(0px, 180px, 0px);
+			}
+			
+		}
+	}
+}

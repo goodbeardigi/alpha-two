@@ -1,0 +1,110 @@
+.alpha-hero-video {
+	display: flex;
+	justify-content: center;
+    align-items: flex-end;
+	height: 80vh;
+	// margin-bottom: 40px;
+
+	@include media( $mobile__only ) {
+		height: 50vh;
+	}
+	.alpha-hero-video-container{
+		height: 90vh;
+		overflow: hidden;
+		position: fixed;
+		z-index: -999;
+		top: 0;
+		left: 0;
+		width: 100vw;
+	}
+	video{
+		// position: absolute;
+		// position: fixed;
+		// z-index: -999;
+		// top: 0;
+		// left: 0;
+		width: 100vw;
+		// height: 85vh;
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+		object-fit: cover;
+
+		@include media( $mobile__only ) {
+			height: 50vh;
+		}
+	}
+	svg{
+		
+		position: relative;
+		z-index: 2;
+		margin-bottom: 40px;
+
+		@include media( $mobile__only ) {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.alpha-hero-video-button{
+	margin-bottom: 60px;
+
+	@include media( $mobile__only ) {
+		margin-bottom: 30px;
+	}
+}
+
+.page-template-template-ays-php{
+	.alpha-modal{
+		max-width: 1200px;
+	}
+	.alpha-modal-container{
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+}
+
+// Parallax Stuff
+
+.alpha-hero-video {
+	overflow: hidden;
+	svg{
+		opacity: 0;
+		margin-bottom: 100px;
+		transition-property: all;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 2s;
+	}
+
+	video{
+		transform: scale(1.5);
+		transition-property: transform;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 2s;
+	}
+
+	&.loaded{
+		svg{
+			opacity: 1;
+			margin-bottom: 40px;
+		}
+		video{
+		transform: scale(1);
+	}
+	}
+
+}
+
+.page-template-template-ays{
+	.site-footer{
+		position: relative;
+	}
+}
+
+
+// WP Preview
+.acf-block-preview{
+	.alpha-hero-video .alpha-hero-video-container{
+		z-index: 0;
+		position: relative;
+	}
+}

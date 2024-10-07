@@ -1,0 +1,62 @@
+.alpha-modal {
+	width: 90%;
+	max-width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 0;
+	position: relative;
+
+	&-player {
+		width: 100%;
+		position: relative;
+		height: 0;
+		padding-bottom: 56.25%;
+		transform: translateY(-50%);
+	}
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.close {
+		position: absolute;
+		top: -50px;
+		right: -50px;
+		width: 42px;
+		height: 42px;
+		border-radius: 50%;
+		line-height: 1;
+		font-size: 15px;
+		color: $color__white;
+		background-color: $color__dark_gray;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:before {
+			width: 12px;
+			height: 12px;
+		}
+
+		@include media( $mobile__only ) {
+			right: 0;
+		}
+	}
+
+	&-container {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2000;
+		background-color: rgba( 0, 0, 0, 0.5 );
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

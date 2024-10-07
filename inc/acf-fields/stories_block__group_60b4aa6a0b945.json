@@ -1,0 +1,139 @@
+[
+    {
+        "key": "group_60b4aa6a0b945",
+        "title": "Stories Block",
+        "fields": [
+            {
+                "key": "field_60b4ad0fcbeec",
+                "label": "Per Page Display",
+                "name": "per_page_display",
+                "aria-label": "",
+                "type": "number",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": 10,
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "min": "",
+                "max": "",
+                "step": ""
+            },
+            {
+                "key": "field_60b4aa71c596b",
+                "label": "Display Stories",
+                "name": "display_stories",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "all": "All",
+                    "type": "By Story Type",
+                    "pick": "Pick Stories"
+                },
+                "default_value": false,
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_60b4aaa3c596c",
+                "label": "Story Type",
+                "name": "story_type",
+                "aria-label": "",
+                "type": "taxonomy",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_60b4aa71c596b",
+                            "operator": "==",
+                            "value": "type"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "taxonomy": "story_type",
+                "field_type": "multi_select",
+                "allow_null": 0,
+                "add_term": 0,
+                "save_terms": 0,
+                "load_terms": 0,
+                "return_format": "id",
+                "multiple": 0,
+                "bidirectional_target": []
+            },
+            {
+                "key": "field_60b4aac7c596d",
+                "label": "Pick Stories",
+                "name": "pick_stories",
+                "aria-label": "",
+                "type": "post_object",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_60b4aa71c596b",
+                            "operator": "==",
+                            "value": "pick"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "story"
+                ],
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 1,
+                "return_format": "id",
+                "ui": 1,
+                "bidirectional_target": []
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/stories"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": false
+    }
+]

@@ -1,0 +1,19 @@
+.branding {
+	@include container();
+
+	display: flex;
+	align-items: center;
+	height: 112px;
+
+	@include media( $mobile__tablet ) {
+		height: 72px;
+	}
+
+	#header-menu-logo {
+		font-size: 40px;
+		color: $color__accent;
+		text-decoration: none;
+		margin-right: 52px;
+		line-height: 1;
+	}
+}

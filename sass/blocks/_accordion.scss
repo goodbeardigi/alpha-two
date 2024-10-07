@@ -1,0 +1,85 @@
+.alpha-accordion {
+	&-tab {
+		@include rounded-shadow();
+		display: block;
+		margin-bottom: 1em;
+		padding: 1em 1em 1em 3em;
+		border-left: 2px solid $color__accent;
+		position: relative;
+
+		h5 {
+			margin: 0;
+
+			a {
+				color: $color__dark;
+				position: relative;
+				display: block;
+
+				&:after {
+					position: absolute;
+					right: 8px;
+					top: 4px;
+					font-family: $font__icons;
+					font-size: 13px;
+					content: "\e806";
+				}
+			}
+		}
+
+		> div {
+			display: none;
+		}
+
+		&.on {
+			h5 a:after {
+				transform: translateY( -2px ) rotate( 180deg );
+			}
+			> div {
+				display: block;
+			}
+		}
+	}
+
+	&-icon {
+		position: absolute;
+		left: 18px;
+		top: 18px;
+		font-size: 18px;
+		color: $color__accent;
+	}
+}
+
+
+.ays-styles{
+	.alpha-accordion {
+		&-tab {
+			border-radius: 0;
+			box-shadow: none;
+			padding: 0;	
+			border-left: 0;
+			border-top: solid 1px #000;
+			padding-top: 20px;
+		}
+
+		h5{
+			font-size: 30px;
+			line-height: 30px;
+			font-family: $font__ays;
+			font-optical-sizing: auto;
+			font-weight: 700;
+			font-style: normal;
+			text-transform: uppercase;
+			margin: 0;
+
+			a{
+				&:after{
+					top: 0;
+				}
+			}
+		}
+
+		.alpha-accordion-title{
+			margin-bottom: 20px;
+		}
+	}
+}

@@ -1,0 +1,63 @@
+.widget {
+	margin: 0 0 1.5em;
+
+	// Make sure select elements fit in widgets.
+	select {
+		max-width: 100%;
+	}
+
+	&-columns {
+		display: flex;
+
+		@include media( $mobile__only ) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&-column {
+		margin-right: 3%;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&_categories {
+		.widget-title {
+			color: $color__dark_gray;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin-left: 0;
+		}
+	}
+
+	&_search {
+		label {
+			position: relative;
+			&:before {
+				font-family: $font__icons;
+				content: "\e824";
+				position: absolute;
+				top: 8px;
+				left: 12px;
+				font-size: 1em;
+				z-index: 1;
+			}
+		}
+		.search-field {
+			padding: 8px 8px 8px 42px;
+			line-height: 1;
+			position: relative;
+			display: block;
+			-webkit-appearance: none;
+			border: 1px solid $color__dark_gray;
+		}
+		.search-submit {
+			display: none;
+		}
+	}
+}
+
+@import "alpha-cta";

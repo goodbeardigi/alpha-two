@@ -1,0 +1,357 @@
+[
+    {
+        "key": "group_661e2c6357272",
+        "title": "AYS Episode carousel",
+        "fields": [
+            {
+                "key": "field_661e2c6369c33",
+                "label": "Block title",
+                "name": "title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_661e2ccc69c34",
+                "label": "Colour one",
+                "name": "colour_one",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "ays-green": "Green",
+                    "ays-blue": "Blue",
+                    "ays-light-blue": "Light Blue",
+                    "ays-purple": "Purple",
+                    "ays-pink": "Pink",
+                    "white": "White"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_661e2d1d69c35",
+                "label": "Colour two",
+                "name": "colour_two",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "ays-green": "Green",
+                    "ays-blue": "Blue",
+                    "ays-light-blue": "Light Blue",
+                    "ays-purple": "Purple",
+                    "ays-pink": "Pink",
+                    "white": "White"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_661e2d7b69c39",
+                "label": "Carousel card size",
+                "name": "card_size",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "large": "Large",
+                    "small": "Small"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_66e068b73be7d",
+                "label": "Format",
+                "name": "format",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "title": "Title",
+                    "video": "Video"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_66fbd73d957e6",
+                "label": "Video source",
+                "name": "video_source",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_66e068b73be7d",
+                            "operator": "==",
+                            "value": "video"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "vimeo": "Vimeo",
+                    "brightcove": "Brightcove"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_6703b2f6c8ab4",
+                "label": "Play button colour",
+                "name": "play_button_colour",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_66e068b73be7d",
+                            "operator": "==",
+                            "value": "video"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "ays-green": "Green",
+                    "ays-blue": "Blue",
+                    "ays-light-blue": "Light Blue",
+                    "ays-purple": "Purple",
+                    "ays-pink": "Pink",
+                    "white": "White"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_661e2d2669c36",
+                "label": "Episodes",
+                "name": "episodes",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Add Row",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_661e2d3d69c37",
+                        "label": "Episode number",
+                        "name": "episode_number",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_66e068b73be7d",
+                                    "operator": "==",
+                                    "value": "title"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_661e2d2669c36"
+                    },
+                    {
+                        "key": "field_661e2d4469c38",
+                        "label": "Episode title",
+                        "name": "episode_title",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_66e068b73be7d",
+                                    "operator": "==",
+                                    "value": "title"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_661e2d2669c36"
+                    },
+                    {
+                        "key": "field_66e068ef3be7e",
+                        "label": "Video id",
+                        "name": "vimeo_id",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_66e068b73be7d",
+                                    "operator": "==",
+                                    "value": "video"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_661e2d2669c36"
+                    },
+                    {
+                        "key": "field_66e2ba669d679",
+                        "label": "Thumbnail",
+                        "name": "thumbnail",
+                        "aria-label": "",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_66e068b73be7d",
+                                    "operator": "==",
+                                    "value": "video"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": "",
+                        "preview_size": "medium",
+                        "parent_repeater": "field_661e2d2669c36"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/ays-episode-carousel"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

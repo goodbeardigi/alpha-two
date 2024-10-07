@@ -1,0 +1,19 @@
+.post-thumbnail {
+	@include container();
+
+	position: relative;
+	min-height: 500px;
+
+	.wp-post-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	@include media( $mobile__only ) {
+		min-height: 320px;
+	}
+}

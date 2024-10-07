@@ -1,0 +1,78 @@
+.alpha-ays-stay-connected{
+	.container{
+		@include media($desktop__only){
+			display: grid;
+			grid-template-columns: repeat(12, minmax(0, 1fr));
+			align-items: center;
+		}
+
+	}
+
+	.ays-stay-connected-left{
+		@include media($desktop__only){
+			position: relative;
+			grid-row-start: 1;
+			grid-row-end: 1;
+			grid-column-start: 1;
+			grid-column-end: 7;
+			z-index: 2;
+		}
+	}
+
+	.ays-stay-connected-right{
+		margin-top: 20px;
+		@include media($desktop__only){
+			grid-row-start: 1;
+			grid-row-end: 1;
+			grid-column-start: 6;
+			grid-column-end: 13;
+			img{
+				margin-top: 70px;
+			}
+		}
+	}
+}
+
+.ays-stay-connected-social{
+	margin: 20px 0;
+	display: flex;
+	gap: 20px;
+
+	@include media($desktop__only){
+		margin: 40px 0;
+	}
+}
+
+.ays-stay-connected-email{
+	display: flex;
+	gap: 10px;
+	color: #000;
+}
+
+.has-ays-light-blue-background-color{
+	h2{
+		color: #fff;
+	}
+	svg path{
+		fill: #fff;
+	}
+	.ays-stay-connected-email{
+		color: #fff;
+	}
+}
+
+// Parallax stuff
+// .ays-parallax{
+// 	.ays-stay-connected-right{
+			
+// 		transform: translate3d(0, 300px, 0px);
+// 		transition-property: transform;
+// 		transition-timing-function: ease-in-out(0.4, 0, 0.2, 1);
+// 		transition-duration: 700ms;
+
+// 		&.move-in{
+// 			transform: translate3d(0px, 0px, 0px);
+// 		}
+		
+// 	}
+// }

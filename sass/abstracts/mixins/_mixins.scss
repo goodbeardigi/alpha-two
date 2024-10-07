@@ -1,0 +1,62 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width( $numberColumns: 3 ) {
+	width: map-get( $columns, $numberColumns ) -
+		( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+@mixin media( $screen ) {
+	@media ( $screen ) {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-down( $bp ) {
+	@media ( max-width: $bp ) {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-up( $bp ) {
+	@media ( min-width: $bp ) {
+		@content;
+	}
+}
+
+@mixin container() {
+	width: 100%;
+	max-width: $width__container;
+	padding-left: $gutter / 2;
+	padding-right: $gutter / 2;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include media( "max-width: 1300px" ) {
+		max-width: $width__container_medium;
+	}
+}
+
+@mixin rounded-shadow() {
+	border-radius: 8px;
+	@include shadow();
+}
+
+@mixin shadow() {
+	box-shadow: -1px -1px 15px -2px rgba( 0, 0, 0, 0.3 );
+}
+
+@mixin block-group() {
+	padding-top: 72px;
+	padding-bottom: 72px;
+
+	@include media( $mobile__tablet ) {
+		padding-top: 36px;
+		padding-bottom: 36px;
+	}
+}

@@ -1,0 +1,9 @@
+.wp-block-embed {
+	&.aligncenter {
+		iframe {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

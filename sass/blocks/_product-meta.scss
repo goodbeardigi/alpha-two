@@ -1,0 +1,23 @@
+.alpha-product-meta {
+	border-left: 1px solid $color__background-hr;
+	padding-left: 1em;
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			margin: 0 0 0.5em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		i {
+			color: $color__accent;
+			margin-right: 0.5em;
+		}
+	}
+}

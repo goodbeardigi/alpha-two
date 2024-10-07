@@ -1,0 +1,100 @@
+.alpha-card {
+	margin-bottom: 20px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&-icon {
+		position: absolute;
+		color: $color__accent;
+		font-size: 34px;
+	}
+
+	&.has-style {
+		&-shadow {
+			@include rounded-shadow();
+			overflow: hidden;
+			padding: 20px;
+		}
+
+		&-plain {
+			&.has-icon {
+				padding-left: 60px;
+				position: relative;
+			}
+			
+			.alpha-card-icon {
+				left: 0;
+				top: -8px;
+			}
+		}
+	}
+
+	.wp-block-image {
+		margin: 1em auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&.has-image-position {
+
+		.alpha-card-image {
+			margin-bottom: 20px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&-default,
+		&-small {
+			.wp-block-image {
+				width: 6em;
+				height: 6em;		
+				img {
+					max-width: 6em;
+					max-height: 6em;
+				}
+			}
+		}
+
+		&-full-width {
+			.wp-block-image {
+				width: 100%;
+				height: auto;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			.alpha-card-image {
+				margin-left: -20px;
+				margin-right: -20px;
+				margin-top: -20px;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
+
+	h5 {
+		&:last-child {
+			margin-bottom: 0;	
+		}
+	}
+
+	p {
+		margin: 0 0 1em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

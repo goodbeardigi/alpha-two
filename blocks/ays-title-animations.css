@@ -1,0 +1,46 @@
+.ays-title-animation {
+	position: relative;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+h1.ays-title-animation-h1 {
+	font-size: 12rem;
+	line-height: 10rem;
+	text-align: center;
+	color: #fff;
+}
+
+.ays-title-animation-pretitle {
+	font-size: 12rem;
+	line-height: 10rem;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: "swear-display", serif;
+	font-weight: 700;
+	font-style: italic;
+}
+
+.animation-apple {
+	position: absolute;
+	right: 100px;
+	top: -100px;
+	width: 300px;
+}
+
+.animation-strawberry {
+	position: absolute;
+	right: 10px;
+	bottom: -40px;
+	width: 250px;
+}
+
+.animation-spaceship {
+	position: absolute;
+	left: 10px;
+	top: -40px;
+	width: 400px;
+}
+
+/*# sourceMappingURL=ays-title-animations.css.map */

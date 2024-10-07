@@ -1,0 +1,36 @@
+.container {
+	@include container();
+}
+
+.columns {
+	display: flex;
+	margin-left: -25px;
+	margin-right: -25px;
+	justify-content: center;
+	align-items: stretch;
+	flex-wrap: wrap;
+
+	.column {
+		padding: 25px;
+		flex: 0 0 100%;
+		display: flex;
+		align-items: stretch;
+		justify-content: stretch;
+	}
+
+	@include media( $tablet__only ) {
+		&.has-4-columns {
+			.column {
+				flex: 0 0 50%;
+			}
+		}
+	}
+
+	@include media( $desktop__only ) {
+		&.has-4-columns {
+			.column {
+				flex: 0 0 25%;
+			}
+		}
+	}
+}

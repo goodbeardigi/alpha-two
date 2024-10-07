@@ -1,0 +1,17 @@
+@import "abstracts/abstracts";
+@import "base/typography/fonts";
+
+.block-editor-block-list {
+
+	&__layout .wp-block {
+		max-width: 100%;
+
+		@import "base/grid";
+		@import "components/components";
+		@import "blocks/blocks";
+
+		.alpha-story > a {
+			pointer-events: none;
+		}
+	}
+}

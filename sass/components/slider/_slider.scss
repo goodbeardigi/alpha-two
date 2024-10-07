@@ -1,0 +1,52 @@
+.alpha-slider {
+	.slick-arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY( -50% );
+		font-size: 32px;
+		color: $color__accent;
+
+		&.prev {
+			left: 0;
+		}
+
+		&.next {
+			right: 0;
+		}
+
+		@include media( $mobile__only ) {
+			top: 100%;
+			transform: translateY( -80% );
+		}
+	}
+
+	.slick-dots {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			margin: 0 8px;
+
+			button {
+				-webkit-appearance: none;
+				font-size: 0;
+				width: 8px;
+				height: 8px;
+				padding: 0;
+				border-radius: 4px;
+				border: 1px solid $color__dark;
+				background-color: $color__white;
+				cursor: pointer;
+			}
+
+			&.slick-active {
+				button {
+					background-color: $color__dark;
+				}
+			}
+		}
+	}
+}

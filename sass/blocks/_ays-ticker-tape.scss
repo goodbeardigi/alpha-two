@@ -1,0 +1,55 @@
+.ticker-tape-container {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    background-color: $color__ays-bright-pink;
+    color: #fff;
+    font-size: 2rem;
+    margin-left: calc((100vw - 100%) / -2);
+    margin-right: calc((100vw - 100%) / -2);
+    text-transform: uppercase;
+    font-family: $font__ays;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 2rem;
+
+    @include media($tablet__desktop){
+        font-size: 3.7rem;
+    }
+}
+
+.ticker-tape {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: 1rem;
+
+    animation-name: marquee;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: normal;
+    span{
+        display: flex;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.acf-block-preview{
+    .ticker-tape-container{
+        margin-left: 0;
+        margin-right: 0;
+        overflow: hidden;
+    }
+}

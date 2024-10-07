@@ -1,0 +1,150 @@
+<?php
+
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array(
+	'key' => 'group_662a28cd086c1',
+	'title' => 'AYS Call To Action',
+	'fields' => array(
+		array(
+			'key' => 'field_662a28cd34f5e',
+			'label' => 'Title',
+			'name' => 'title',
+			'aria-label' => '',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'maxlength' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+		),
+		array(
+			'key' => 'field_662a29812843a',
+			'label' => 'Button type',
+			'name' => 'button_type',
+			'aria-label' => '',
+			'type' => 'button_group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'button' => 'Button',
+				'embed' => 'Newsletter list embed',
+			),
+			'default_value' => '',
+			'return_format' => 'value',
+			'allow_null' => 0,
+			'layout' => 'horizontal',
+		),
+		array(
+			'key' => 'field_662a28e634f5f',
+			'label' => 'Button',
+			'name' => 'button',
+			'aria-label' => '',
+			'type' => 'link',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_662a29812843a',
+						'operator' => '==',
+						'value' => 'button',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+		),
+		array(
+			'key' => 'field_662a29aa2843b',
+			'label' => 'Newsletter embed',
+			'name' => 'newsletter_embed',
+			'aria-label' => '',
+			'type' => 'textarea',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_662a29812843a',
+						'operator' => '==',
+						'value' => 'embed',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'maxlength' => '',
+			'rows' => '',
+			'placeholder' => '',
+			'new_lines' => '',
+		),
+		array(
+			'key' => 'field_662a28f034f60',
+			'label' => 'Image',
+			'name' => 'image',
+			'aria-label' => '',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+			'preview_size' => 'medium',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/ays-call-to-action',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+	'show_in_rest' => 0,
+));
+
+endif;

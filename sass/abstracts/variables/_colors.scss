@@ -1,0 +1,65 @@
+$color__white: #fff;
+$color__dark: #000;
+$color__dark_gray: #414141;
+$color__dark_blue: #1e2433;
+$color__red: #e42312;
+$color__light_gray: #f3f4f5;
+$color__purple: #4d4da5;
+
+$color__background-body: $color__white;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+$color__background-nav: #2a323f;
+$color__background-hero: $color__dark_gray;
+
+$color__background-footer: $color__dark_blue;
+
+$color__accent: $color__red;
+$color__accent-hover: #b81d0f;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: #4169e1; //royalblue
+$color__link-visited: #800080; //purple
+$color__link-hover: #191970; //midnightblue
+$color__text-main: #414141;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+$color__nav-content: $color__white;
+$color__nav-link: $color__white;
+
+$color__text: $color__dark;
+
+$color__ays-grey: #E0DBD7;
+$color__ays-blue: #4F38E1;
+$color__ays-light-blue: #0042FF;
+$color__ays-green: #C2FF00;
+$color__ays-purple: #4F38E1;
+$color__ays-pink: #D90099;
+$color__ays-bright-pink: #FF22ED;
+
+$colors: (
+	"black": $color__dark,
+	"white": $color__white,
+	"dark-gray": $color__dark_gray,
+	"dark-blue": $color__dark_blue,
+	"red": $color__red,
+	"light-gray": $color__light_gray,
+	"purple": $color__purple,
+	"ays-grey": $color__ays-grey,
+	"ays-blue": $color__ays-blue,
+	"ays-light-blue": $color__ays-light-blue,
+	"ays-green": $color__ays-green,	
+	"ays-purple": $color__ays-purple,	
+	"ays-pink": $color__ays-pink
+);
+

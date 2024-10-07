@@ -1,0 +1,84 @@
+.alpha-offices {
+	&-tabs {
+	}
+
+	&-nav {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid #E0E0E0;
+		position: relative;
+
+		.indicator {
+			width: 48px;
+			height: 2px;
+			background-color: $color__accent;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			transition: all .3s ease;
+		}
+
+		li {
+			text-align: center;
+			opacity: 0.7;
+
+			&.selected {
+				opacity: 1;
+			}
+
+			a {
+				display: block;
+				padding: 1em 1.5em;
+				color: $color__dark;
+			}
+
+			img {
+				width: 48px;
+				height: auto;
+				display: inline-block;
+			}
+
+			span {
+				display: block;
+				font-size: 1.2em;
+				font-weight: 600;
+			}
+		}
+	}
+
+	&-tab {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&-single {
+		display: flex;
+		flex: 0 0 25%;
+		align-items: center;
+		padding: 1em 10px;
+
+		&:link,
+		&:visited {
+			color: $color__dark;
+		}
+
+		img {
+			flex: 0 0 48px;
+			margin-right: 1em;
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			object-fit: cover;
+
+			&.country-flag {
+				@include shadow();
+			}
+		}
+		&-name {
+			font-weight: 600;
+		}
+	}
+}

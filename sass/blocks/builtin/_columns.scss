@@ -1,0 +1,22 @@
+.wp-block-columns {
+	margin-bottom: 0;
+}
+
+.wp-block-column {
+	margin-bottom: 2em;
+
+	@include media( $desktop__only ) {
+		&:not( :first-child ) {
+			margin-left: 50px;
+		}
+	}
+
+	@include media( $tablet__only ) {
+		&:nth-child( even ) {
+			margin-left: 2em;
+		}
+		&:nth-child( odd ) {
+			margin-left: 0;
+		}
+	}
+}

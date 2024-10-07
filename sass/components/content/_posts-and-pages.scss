@@ -1,0 +1,22 @@
+.entry-content,
+.entry-footer {
+	@include container();
+}
+
+.type-post .entry-content,
+.type-post .entry-footer,
+.post-navigation,
+.comments-area {
+	max-width: 1024px;
+	padding-left: 72px;
+	padding-right: 72px;
+	padding-bottom: 72px;
+	margin-left: auto;
+	margin-right: auto;
+
+
+	@include media( $mobile__only ) {
+		padding-left: $gutter / 2;
+		padding-right: $gutter / 2;
+	}
+}

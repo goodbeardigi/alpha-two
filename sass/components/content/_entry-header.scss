@@ -1,0 +1,24 @@
+.entry-header {
+	background-color: $color__white;
+	padding: 72px;
+	border-radius: 8px;
+	max-width: 1024px;
+	margin: 0 auto;
+
+	@include media( $mobile__only ) {
+		padding: $gutter / 2;
+	}
+}
+
+.entry-title {
+	margin-bottom: 0;
+}
+
+.post-thumbnail + .entry-header {
+	margin-top: -240px;
+	position: relative;
+
+	@include media( $mobile__only ) {
+		margin-top: -100px;
+	}
+}

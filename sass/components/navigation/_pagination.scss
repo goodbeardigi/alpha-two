@@ -1,0 +1,33 @@
+.pagination {
+	padding: 25px;
+	text-align: center;
+
+	.page-numbers {
+		margin: 0 0.5em;
+		display: inline-block;
+	}
+}
+
+@media (max-width: 599px) {
+	.alpha-offices-tab {
+		flex-direction: column;
+	}
+
+	.alpha-offices-nav {
+		flex-wrap: wrap;
+		
+		li {
+			flex: 1;
+		}
+
+		.indicator {
+			display: none;
+		}
+
+		.selected {
+			color: $color__red;
+		}
+	}
+	
+	
+}

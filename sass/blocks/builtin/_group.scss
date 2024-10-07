@@ -1,0 +1,30 @@
+.wp-block-group {
+	@include block-group();
+
+	&__inner-container {
+		.has-background & {
+			@include container();
+		}
+	}
+
+	&.has-background {
+		margin-left: calc( ( 100vw - 100% ) / -2 );
+		margin-right: calc( ( 100vw - 100% ) / -2 );
+	}
+}
+
+.ays-styles{
+	.wp-block-group{
+		position: relative;
+		padding-top: 70px;
+		padding-bottom: 70px;
+		&.no-padding-bottom{
+			padding-bottom: 0;
+		}
+
+		@include media($tablet__desktop){
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+	}
+}

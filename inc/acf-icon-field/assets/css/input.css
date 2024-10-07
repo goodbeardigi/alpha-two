@@ -1,0 +1,31 @@
+.alpha-icons-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.alpha-icons-single {
+	margin: 0 4px 4px 0;
+}
+
+.alpha-icons-single:not(.alpha-icons-single-none) {
+	font-size: 18px;
+	line-height: 1;
+}
+
+.alpha-icons-single input,
+.alpha-icons-single-none input {
+	display: none;
+}
+.alpha-icons-single label {
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+.alpha-icons-single input:checked + label {
+	background: #444;
+	color: #fff;
+}

@@ -1,0 +1,61 @@
+.type-product {
+
+	.alpha-hero {
+		background-color: $color__dark;
+		&:before {
+			opacity: 0.3;
+		}
+	}
+
+	.wp-block-group:first-of-type {
+		h4 {
+			font-size: 32px;
+			letter-spacing: 1px;
+			line-height: 140%;
+			margin-bottom: 20px;
+			color: $color__dark_gray;
+		}
+
+		h3 {
+			margin-top: 15px;
+			font-size: 32px;
+		}
+
+		@include media( $mobile__only ) {
+			h3, h4 {
+				font-size: 18px;
+			}
+
+			h3 {
+				margin-top: 0;
+			}
+
+			.wp-block-column:last-child {
+				order: -1;
+			}
+		}
+	}
+
+	.wp-block-buttons {
+		@include media( $mobile__only ) {
+			justify-content: center;
+		}
+	}
+
+	.wp-block-button {	
+		&__link {
+			min-width: 280px;
+			margin: 20px auto;
+		}
+	}
+
+	.alpha-card.has-style-plain {
+		.alpha-card-icon {
+			top: -12px;
+		}
+		h5 {
+			font-size: 16px;
+			margin: 10px 0;
+		}
+	}
+}
